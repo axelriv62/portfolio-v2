@@ -13,7 +13,7 @@ export default function RootLayout({
                 <menu className="flex justify-between font-semibold">
                     <Link href="/">Axel Rivière</Link>
                     <div className="flex space-x-8">
-                        <Link href="/#">Présentation</Link>
+                        <Link href="/about">Présentation</Link>
                         <Link href="/#">Réalisations</Link>
                         <Link href="/#">Blog</Link>
                     </div>
