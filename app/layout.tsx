@@ -14,7 +14,7 @@ export default function RootLayout({
                     <Link href="/">Axel Rivière</Link>
                     <div className="flex space-x-8">
                         <Link href="/about">Présentation</Link>
-                        <Link href="/#">Réalisations</Link>
+                        <Link href="/projects">Réalisations</Link>
                         <Link href="/#">Blog</Link>
                     </div>
                 </menu>
