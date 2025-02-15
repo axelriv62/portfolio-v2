@@ -11,8 +11,11 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold p-1">Bonjour, je suis</h3>
                 <h1 className="text-8xl font-semibold p-1">Axel Rivière</h1>
                 <h2 className="text-4xl font-semibold p-1">Développeur Full-Stack</h2>
-                <button className="border font-bold text-xs py-2 px-4 rounded-full mt-4 border-stone-500 w-32">
-                    <Link href="#">Présentation</Link>
+                <button className="border font-bold text-xs py-1.5 px-1.5 rounded-full mt-4 border-stone-500 w-36 flex items-center space-x-2">
+                    <Link href="/about" className="flex items-center space-x-3">
+                        <Image src="https://avatars.githubusercontent.com/u/130988871?v=4" alt="Photo de profile" width="32" height="32" className="rounded-full" />
+                        <span>Présentation</span>
+                    </Link>
                 </button>
             </div>
             <div>
