@@ -1,0 +1,45 @@
+export type Competence = {
+    name: string;
+    icon: string;
+}
+
+export const competences: Competence[] = [
+    { name: "adobexd", icon: "/file.svg" },
+    { name: "bash", icon: "/file.svg" },
+    { name: "css", icon: "/file.svg" },
+    { name: "datagrip", icon: "/file.svg" },
+    { name: "docker", icon: "/file.svg" },
+    { name: "eclipse", icon: "/file.svg" },
+    { name: "figma", icon: "/file.svg" },
+    { name: "flask", icon: "/file.svg" },
+    { name: "git", icon: "/file.svg" },
+    { name: "github", icon: "/file.svg" },
+    { name: "gitlab", icon: "/file.svg" },
+    { name: "html", icon: "/file.svg" },
+    { name: "intellij", icon: "/file.svg" },
+    { name: "java", icon: "/file.svg" },
+    { name: "javafx", icon: "/file.svg" },
+    { name: "jdbc", icon: "/file.svg" },
+    { name: "junit", icon: "/file.svg" },
+    { name: "laravel", icon: "/file.svg" },
+    { name: "mysql", icon: "/file.svg" },
+    { name: "php", icon: "/file.svg" },
+    { name: "phpstorm", icon: "/file.svg" },
+    { name: "plsql", icon: "/file.svg" },
+    { name: "postgresql", icon: "/file.svg" },
+    { name: "pycharm", icon: "/file.svg" },
+    { name: "python", icon: "/file.svg" },
+    { name: "scene-builder", icon: "/file.svg" },
+    { name: "sonarlint", icon: "/file.svg" },
+    { name: "sonarqube", icon: "/file.svg" },
+    { name: "sqlite", icon: "/file.svg" },
+    { name: "trello", icon: "/file.svg" },
+    { name: "vscode", icon: "/file.svg" },
+    { name: "webstorm", icon: "/file.svg" },
+    { name: "typescript", icon: "/file.svg" },
+    { name: "angular", icon: "/file.svg" },
+    { name: "nextjs", icon: "/file.svg" },
+    { name: "api", icon: "/file.svg" },
+    { name: "postman", icon: "/file.svg" },
+    { name: "android", icon: "/file.svg" }
+];
