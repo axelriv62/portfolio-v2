@@ -1,38 +1,117 @@
 import Link from "next/link";
 import Image from "next/image";
+import { competences } from "@/data/competences";
+import { formations, experiences, certifications } from "@/data/experiences";
 
 export default function About() {
+    const half = Math.ceil(competences.length / 2);
+    const firstHalf = competences.slice(0, half);
+    const secondHalf = competences.slice(half);
+
     return (
-        <main className="p-64">
+        <main className="w-3/4 mx-auto mt-28 mb-28">
             <div className="flex space-x-12">
-                <div className="flex flex-col space-y-4">
-                    <Image src="/file.svg" alt="Profile picture" width={400} height={400} className="border rounded-full border-stone-500" />
-                    <div className="flex space-x-4">
+                <div className="flex flex-col items-center">
+                    <Image src="/file.svg" alt="Profile picture" width={500} height={500} className="border rounded-full border-stone-500" />
+                    <div className="flex space-x-4 mt-3">
                         <h3 className="text-2xl font-semibold p-1">Langues</h3>
                         <p className="font-medium p-2">FR</p>
                         <p className="font-medium p-2">EN</p>
                     </div>
                 </div>
-                <div className="flex flex-col flex-grow space-y-4">
+                <div className="flex flex-col flex-grow mt-5">
                     <div className="flex space-x-2">
-                        <button className="border font-bold text-xs py-2 px-4 rounded-full mt-4 border-stone-500 w-14">
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 w-14">
                             <Link href="#">CV</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-full mt-4 border-stone-500 w-20">
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 w-20">
                             <Link href="https://github.com/axelriv62">GitHub</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-full mt-4 border-stone-500 w-24">
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 w-24">
                             <Link href="https://linkedin.com/in/axel-riviere-dev">LinkedIn</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-full mt-4 border-stone-500 w-16">
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 w-16">
                             <Link href="mailto:axel.riviere.dev@gmail.com">Mail</Link>
                         </button>
                     </div>
                     <div>
                         <h1 className="text-8xl font-semibold p-1 mt-3">Axel Rivière</h1>
                         <h2 className="text-4xl font-semibold p-1">Développeur Full-Stack</h2>
-                        <p className="font-medium p-1 mt-5">Je m’appelle Axel, je suis étudiant en 2ᵉ année de BUT Informatique à l’IUT de Lens et passionné par le développement d’applications. Je recherche un stage de 8 à 10 semaines dès le 28 avril 2025 pour mettre en pratique mes compétences et approfondir mon expérience.</p>
+                        <p className="font-medium mt-5">
+                            Je m’appelle Axel, je suis étudiant en 2ᵉ année de BUT Informatique à l’IUT de Lens et passionné par le développement d’applications.
+                            Je recherche un stage de 8 à 10 semaines dès le 28 avril 2025 pour mettre en pratique mes compétences et approfondir mon expérience.
+                        </p>
                     </div>
+                </div>
+            </div>
+
+            <div>
+                <h3 className="text-2xl font-semibold p-1 mt-20">Compétences</h3>
+                <ul className="flex justify-between flex-wrap mt-4">
+                    {firstHalf.map((competence, index) => (
+                        <li key={index} className="p-2">
+                            <Image src={competence.icon} alt={competence.name} width={50} height={50} />
+                        </li>
+                    ))}
+                </ul>
+                <ul className="flex justify-between flex-wrap mt-4">
+                    {secondHalf.map((competence, index) => (
+                        <li key={index} className="p-2">
+                            <Image src={competence.icon} alt={competence.name} width={50} height={50} />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
+            <div className="flex space-x-12 mt-20">
+                <div className="flex flex-col w-1/2">
+                    <h3 className="text-2xl font-semibold">Formations</h3>
+                    <ul className="flex-grow">
+                        {formations.map((formation, index) => (
+                            <li key={index} className="mt-10">
+                                <p className="mt-1">{formation.date}</p>
+                                <h4 className="text-lg font-bold mt-1">{formation.title}</h4>
+                                <p className="mt-1">{formation.place}</p>
+                                <ul className="p-2 mt-3">
+                                    {formation.details?.split('\n').map((detail, i) => (
+                                        <li key={i}>{detail}</li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ul>
+                    <h3 className="text-2xl font-semibold mt-10">Certifications</h3>
+                    <ul className="flex-grow">
+                        {certifications.map((certification, index) => (
+                            <li key={index} className="mt-10">
+                                <p className="mt-1">{certification.date}</p>
+                                <h4 className="text-lg font-bold mt-1">{certification.title}</h4>
+                                <p className="mt-1">{certification.place}</p>
+                                <ul className="mt-1">
+                                    {certification.details?.split('\n').map((detail, i) => (
+                                        <li key={i}>{detail}</li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="flex flex-col w-1/2">
+                    <h3 className="text-2xl font-semibold">Expériences</h3>
+                    <ul className="flex-grow">
+                        {experiences.map((experience, index) => (
+                            <li key={index} className="mt-10">
+                                <p className="mt-1">{experience.date}</p>
+                                <h4 className="text-lg font-bold mt-1">{experience.title}</h4>
+                                <p className="mt-1">{experience.place}</p>
+                                <ul className="mt-1">
+                                    {experience.details?.split('\n').map((detail, i) => (
+                                        <li key={i}>{detail}</li>
+                                    ))}
+                                </ul>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
         </main>
