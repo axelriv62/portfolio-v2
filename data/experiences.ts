@@ -12,7 +12,6 @@ export const formations: Experiences[] = [
         place: "IUT de Lens",
         details: ""
     },
-
     {
         title: `Baccaulauréat Général`,
         date: "2020-2023",
@@ -26,6 +25,12 @@ export const formations: Experiences[] = [
 ];
 
 export const experiences: Experiences[] = [
+    {
+        title: "Stagiaire développeur Next.js",
+        date: "Mai-Juin 2025",
+        place: "4spel",
+        details: ""
+    },
     {
         title: "Agent du service technique",
         date: "Août 2024",
