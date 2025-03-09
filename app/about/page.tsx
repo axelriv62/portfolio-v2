@@ -16,27 +16,27 @@ export default function About() {
                     <div className="flex space-x-5 mt-5 items-center ">
                         <h3 className="text-2xl font-semibold p-1">Langues</h3>
                         <div className="flex space-x-5">
-                            <Image src="/french.svg" alt="France" width="40" height="10" title="Français" className="object-cover rounded-xl border border-stone-500" />
-                            <Image src="/english.svg" alt="English" width="40" height="10" title="English" className="object-cover rounded-xl border border-stone-500" />
+                            <Image src="icons//french.svg" alt="France" width="40" height="10" title="Français" className="object-cover rounded-xl border border-stone-500 duration-100 hover:scale-105" />
+                            <Image src="icons/english.svg" alt="English" width="40" height="10" title="English" className="object-cover rounded-xl border border-stone-500 duration-100 hover:scale-105" />
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col flex-grow mt-5">
                     <div className="flex space-x-2">
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2">
-                            <Image src="/resume.svg" alt="CV" width={20} height={20} />
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                            <Image src="icons//resume.svg" alt="CV" width={20} height={20} />
                             <Link href="/resume.pdf">CV</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2">
-                            <Image src="/github.svg" alt="GitHub" width={20} height={20} />
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                            <Image src="logos/github.svg" alt="GitHub" width={20} height={20} />
                             <Link href="https://github.com/axelriv62">GitHub</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2">
-                            <Image src="/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                            <Image src="logos/linkedin.svg" alt="LinkedIn" width={20} height={20} />
                             <Link href="https://linkedin.com/in/axel-riviere-dev">LinkedIn</Link>
                         </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2">
-                            <Image src="/mail.svg" alt="Mail" width={20} height={20} />
+                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                            <Image src="icons/mail.svg" alt="Mail" width={20} height={20} />
                             <Link href="mailto:axel.riviere.dev@gmail.com">Mail</Link>
                         </button>
                     </div>
@@ -45,7 +45,7 @@ export default function About() {
                         <h2 className="text-4xl font-semibold p-1">Développeur Full-Stack</h2>
                         <p className="font-medium mt-5">
                             Je m’appelle Axel, je suis étudiant en 2ᵉ année de BUT Informatique à l’IUT de Lens et passionné par le développement d’applications.
-                            Je recherche un stage de 8 à 10 semaines dès le 28 avril 2025 pour mettre en pratique mes compétences et approfondir mon expérience.
+                            Je recherche une alternance dès juillet 2025 pour ma 3ᵉ année afin de mettre en pratique mes compétences et approfondir mon expérience.
                         </p>
                     </div>
                 </div>
@@ -55,14 +55,14 @@ export default function About() {
                 <h3 className="text-2xl font-semibold p-1 mt-20">Compétences</h3>
                 <ul className="flex justify-between flex-wrap mt-4">
                     {firstHalf.map((competence) => (
-                        <li key={competence.name} className="p-2 flex items-center justify-center">
+                        <li key={competence.name} className="p-2 flex items-center justify-center duration-100 hover:scale-110">
                             <Image src={competence.icon} alt={competence.name} title={competence.name} width={50} height={50} />
                         </li>
                     ))}
                 </ul>
                 <ul className="flex justify-between flex-wrap mt-4">
                     {secondHalf.map((competence) => (
-                        <li key={competence.name} className="p-2 flex items-center justify-center">
+                        <li key={competence.name} className="p-2 flex items-center justify-center duration-100 hover:scale-110">
                             <Image src={competence.icon} alt={competence.name} title={competence.name} width={50} height={50} />
                         </li>
                     ))}
