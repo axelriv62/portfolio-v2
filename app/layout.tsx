@@ -8,15 +8,16 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="fr">
         <body>
             <header>
                 <menu className="flex justify-between font-semibold">
-                    <Link href="/">Axel Rivière</Link>
+                    <Link href="/" className="duration-100 hover:scale-105">Axel Rivière</Link>
+                    <link rel="icon" href="https://avatars.githubusercontent.com/u/130988871?v=4" />
                     <div className="flex space-x-8">
-                        <Link href="/about">Présentation</Link>
-                        <Link href="/projects">Réalisations</Link>
-                        <Link href="/blog">Blog</Link>
+                        <Link href="/about" className="duration-100 hover:scale-105">Présentation</Link>
+                        <Link href="/projects" className="duration-100 hover:scale-105">Réalisations</Link>
+                        <Link href="/blog" className="duration-100 hover:scale-105">Blog</Link>
                     </div>
                 </menu>
             </header>
@@ -24,9 +25,9 @@ export default function RootLayout({
             <footer className="flex justify-between font-semibold">
                 <p>© 2025 Axel Rivière</p>
                 <div className="flex space-x-6">
-                    <Link href="https://github.com/axelriv62"><Image src="/github.svg" alt="GitHub" width="30" height="30"/></Link>
-                    <Link href="https://linkedin.com/in/axel-riviere-dev"><Image src="/linkedin.svg" alt="LinkedIn" width="30" height="30"/></Link>
-                    <Link href="mailto:axel.riviere.dev@gmail.com"><Image src="/mail.svg" alt="Mail" width="30" height="30"/></Link>
+                    <Link href="https://github.com/axelriv62" className="duration-100 hover:scale-105"><Image src="logos/github.svg" alt="GitHub" width="30" height="30"/></Link>
+                    <Link href="https://linkedin.com/in/axel-riviere-dev" className="duration-100 hover:scale-105"><Image src="logos/linkedin.svg" alt="LinkedIn" width="30" height="30"/></Link>
+                    <Link href="mailto:axel.riviere.dev@gmail.com" className="duration-100 hover:scale-105"><Image src="icons/mail.svg" alt="Mail" width="30" height="30"/></Link>
                 </div>
             </footer>
         </body>

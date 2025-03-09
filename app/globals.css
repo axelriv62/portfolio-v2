@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 :root {
-  --background: #DEDEDD;
-  --foreground: #1E1E1E;
+  --background: #1C1E26;
+  --foreground: #DEDEDD;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1E1E1E;
+    --background: #1C1E26;
     --foreground: #DEDEDD;
   }
 }
@@ -19,4 +19,9 @@ body {
   background: var(--background);
   font-family: 'Inter', sans-serif;
   margin: 40px;
+}
+
+/* globals.css */
+.flex-grow {
+  flex-grow: 1;
 }
