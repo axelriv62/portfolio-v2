@@ -9,7 +9,7 @@ export default function About() {
     const secondHalf = competences.slice(half);
 
     return (
-        <main className="w-3/4 mx-auto mt-28 mb-28">
+        <main className="fade-in-bottom w-3/4 mx-auto mt-28 mb-28">
             <div className="flex space-x-12">
                 <div className="flex flex-col items-center">
                     <Image src="/profile-picture.png" alt="Profile picture" width={500} height={500} className="border rounded-full border-stone-500 object-cover" />
@@ -24,7 +24,7 @@ export default function About() {
                 <div className="flex flex-col flex-grow mt-5">
                     <div className="flex space-x-2">
                         <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
-                            <Image src="icons//resume.svg" alt="CV" width={20} height={20} />
+                            <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
                             <Link href="/resume.pdf">CV</Link>
                         </button>
                         <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">

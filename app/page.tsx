@@ -6,14 +6,14 @@ export default function Home() {
     const firstProject = projects[0];
 
     return (
-        <main className="mb-28 mr-28 ml-28">
+        <main className="fade-in-bottom mb-28 mr-28 ml-28">
             <div className="h-[calc(100vh-40px)] flex flex-col justify-center items-center w-full">
                 <h3 className="text-3xl font-semibold p-2">Bonjour, je suis</h3>
                 <h1 className="text-9xl font-semibold p-2">Axel Rivière</h1>
                 <h2 className="text-5xl font-semibold p-2">Développeur Full-Stack</h2>
                 <button className="border font-bold text-xs py-1.5 px-1.5 rounded-full mt-8 border-stone-500 w-48 flex items-center space-x-2 duration-100 hover:scale-105">
                     <Link href="/about" className="flex items-center space-x-5">
-                        <Image src="https://avatars.githubusercontent.com/u/130988871?v=4" alt="Photo de profile" width="32" height="32" className="rounded-full" />
+                        <Image src="/profile-picture.png" alt="Photo de profile" width="32" height="32" className="rounded-full" />
                         <p>Présentation</p>
                         <Image src="/icons/arrow.png" width="16" height="16" alt="Arrow"></Image>
                     </Link>

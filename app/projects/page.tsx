@@ -6,7 +6,7 @@ export default function Projects() {
         <main className="mt-28 mb-28">
             <div className="flex flex-col items-center space-y-24">
                 {projects.map((project, index) => (
-                    <div key={index} className={`flex w-full max-w-7xl p-8 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
+                    <div key={index} className={`fade-in-bottom flex w-full max-w-7xl p-8 ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}>
                         <div className="flex flex-col items-center w-1/2" style={{ marginRight: index % 2 === 0 ? '64px' : '0', marginLeft: index % 2 === 1 ? '64px' : '0' }}>
                             <Image src={project.image} alt={project.title} width={600} height={500} className="rounded-lg shadow-lg duration-300 hover:scale-105" />
                         </div>
