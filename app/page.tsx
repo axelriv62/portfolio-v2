@@ -7,7 +7,7 @@ export default function Home() {
 
     return (
         <main className="mb-28 mr-28 ml-28">
-            <div className="h-screen flex flex-col justify-center items-center w-full">
+            <div className="h-[calc(100vh-40px)] flex flex-col justify-center items-center w-full">
                 <h3 className="text-3xl font-semibold p-2">Bonjour, je suis</h3>
                 <h1 className="text-9xl font-semibold p-2">Axel Rivière</h1>
                 <h2 className="text-5xl font-semibold p-2">Développeur Full-Stack</h2>
@@ -19,7 +19,7 @@ export default function Home() {
                     </Link>
                 </button>
             </div>
-            <div>
+            <div className="mb-48">
                 <h3 className="text-2xl font-semibold p-1">Dernière réalisation</h3>
                 <div className="flex w-full mt-24 justify-center">
                     <div className="flex flex-col ">
@@ -36,9 +36,6 @@ export default function Home() {
                         <a href={firstProject.link} className="mt-4 inline-block font-semibold">En savoir plus</a>
                     </div>
                 </div>
-            </div>
-            <div className="mt-32">
-                <h3 className="text-2xl font-semibold p-1">Derniers articles</h3>
             </div>
         </main>
     );

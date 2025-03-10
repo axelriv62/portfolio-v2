@@ -12,12 +12,11 @@ export default function RootLayout({
         <body>
             <header>
                 <menu className="flex justify-between font-semibold">
-                    <Link href="/" className="duration-100 hover:scale-105">Axel Rivière</Link>
+                    <Link href="/">Axel Rivière</Link>
                     <link rel="icon" href="https://avatars.githubusercontent.com/u/130988871?v=4" />
                     <div className="flex space-x-8">
-                        <Link href="/about" className="duration-100 hover:scale-105">Présentation</Link>
-                        <Link href="/projects" className="duration-100 hover:scale-105">Réalisations</Link>
-                        <Link href="/blog" className="duration-100 hover:scale-105">Blog</Link>
+                        <Link href="/about">Présentation</Link>
+                        <Link href="/projects">Réalisations</Link>
                     </div>
                 </menu>
             </header>
