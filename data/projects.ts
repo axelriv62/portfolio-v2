@@ -8,6 +8,20 @@ export type Projects = {
 
 export const projects: Projects[] = [
     {
+        image: "/projects/gestion-depenses.png",
+        title: "Gestion Dépenses",
+        description: "Application de gestion de dépenses.",
+        tags: ["Angular", "TypeScript"],
+        link: "https://github.com/axelriv62/gestion-depenses",
+    },
+    {
+        image: "/projects/activite-sport.png",
+        title: "Activite Sport",
+        description: "API de gestion de réservation d'activités sportives.",
+        tags: ["Laravel", "SQLite", "Postman"],
+        link: "https://github.com/axelriv62/activite-sport",
+    },
+    {
         image: "/projects/vanlifer.png",
         title: "VanLifer",
         description: "Application de publication de voyages en van.",
