@@ -2,7 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { competences } from "@/data/competences";
 import { formations, experiences, certifications } from "@/data/experiences";
+import {Metadata} from "next";
 
+export const metadata: Metadata = {
+    title: 'Présentation - Axel Rivière',
+};
 export default function About() {
     const half = Math.ceil(competences.length / 2);
     const firstHalf = competences.slice(0, half);
@@ -10,19 +14,19 @@ export default function About() {
 
     return (
         <main className="fade-in-bottom w-3/4 mx-auto mt-28 mb-28">
-            <div className="flex space-x-12">
+            <div className="md:flex md:space-x-12">
                 <div className="flex flex-col items-center">
                     <Image src="/profile-picture.png" alt="Profile picture" width={500} height={500} className="border rounded-full border-stone-500 object-cover" />
-                    <div className="flex space-x-5 mt-5 items-center ">
+                    <div className="flex space-x-5 mt-5 items-center">
                         <h3 className="text-2xl font-semibold p-1">Langues</h3>
                         <div className="flex space-x-5">
-                            <Image src="icons//french.svg" alt="France" width="40" height="10" title="Français" className="object-cover rounded-xl border border-stone-500 duration-100 hover:scale-105" />
+                            <Image src="icons/french.svg" alt="France" width="40" height="10" title="Français" className="object-cover rounded-xl border border-stone-500 duration-100 hover:scale-105" />
                             <Image src="icons/english.svg" alt="English" width="40" height="10" title="English" className="object-cover rounded-xl border border-stone-500 duration-100 hover:scale-105" />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col flex-grow mt-5">
-                    <div className="flex space-x-2">
+                <div className="mt-5">
+                    <div className="flex flex-wrap xl:space-x-2">
                         <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
                             <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
                             <Link href="/resume.pdf">CV</Link>
@@ -41,8 +45,8 @@ export default function About() {
                         </button>
                     </div>
                     <div>
-                        <h1 className="text-8xl font-semibold p-1 mt-3">Axel Rivière</h1>
-                        <h2 className="text-4xl font-semibold p-1">Développeur Full-Stack</h2>
+                        <h1 className="xl:text-8xl md:text-5xl text-3xl font-semibold p-1 mt-3">Axel Rivière</h1>
+                        <h2 className="xl:text-4xl md:text-2xl text-xl font-semibold p-1">Développeur Full-Stack</h2>
                         <p className="font-medium mt-5">
                             Je m’appelle Axel, je suis étudiant en 2ᵉ année de BUT Informatique à l’IUT de Lens et passionné par le développement d’applications.
                             Je recherche une alternance dès juillet 2025 pour ma 3ᵉ année afin de mettre en pratique mes compétences et approfondir mon expérience.
@@ -69,8 +73,8 @@ export default function About() {
                 </ul>
             </div>
 
-            <div className="flex space-x-12 mt-20">
-                <div className="flex flex-col w-1/2">
+            <div className="xl:flex xl:space-x-12 mt-20">
+                <div className="flex flex-col xl:w-1/2">
                     <h3 className="text-2xl font-semibold">Formations</h3>
                     <ul className="flex-grow">
                         {formations.map((formation) => (
@@ -86,7 +90,7 @@ export default function About() {
                             </li>
                         ))}
                     </ul>
-                    <h3 className="text-2xl font-semibold mt-10">Certifications</h3>
+                    <h3 className="text-2xl font-semibold xl:mt-10 mt-20">Certifications</h3>
                     <ul className="flex-grow">
                         {certifications.map((certification) => (
                             <li key={certification.title} className="mt-10">
@@ -102,7 +106,7 @@ export default function About() {
                         ))}
                     </ul>
                 </div>
-                <div className="flex flex-col w-1/2">
+                <div className="mt-20 xl:mt-0">
                     <h3 className="text-2xl font-semibold">Expériences</h3>
                     <ul className="flex-grow">
                         {experiences.map((experience) => (
