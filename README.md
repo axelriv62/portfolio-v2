@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<h1 align="center">
+  <br>
+  <img src="https://avatars.githubusercontent.com/u/130988871" width="200" alt="logo">
+  <br>
+  <b>Portfolio</b>
+  <br>
+  <a href="README.md">
+    <img src="https://img.shields.io/badge/README-FR-blue" alt="README-FR">
+  </a>
+  <a href="README-EN.md">
+    <img src="https://img.shields.io/badge/README-EN-blue" alt="README-EN">
+  </a>
+</h1>
 
-## Getting Started
+<br>
 
-First, run the development server:
+## Présentation
+Ce projet est une réfonte de mon portfolio, cette fois réalisé avec Next.js, TypeScript, React et Tailwind. 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Il a pour but de présenter mes compétences, mes projets et mes expériences professionnelles dans le but de trouver une alternance pour ma troisième année de BUT Informatique.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Plus personnellement, ce projet me permet de découvrir Next.js, React et Tailwind.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<br>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pistes d’amélioration
 
-## Learn More
+Ce projet étant en constante évolution, voici quelques pistes d'amélioration que je souhaite apporter :
 
-To learn more about Next.js, take a look at the following resources:
+- Améliorer le design avec des animations, des transitions et des éléments graphiques attrayants.
+- Améliorer le responsive pour optimiser accessibilité à toutes les tailles d'écran.
+- Apporter une traduction anglaise.
+- Développer une page 404.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Langages, outils et logiciels utilisés
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![My Skills](https://go-skill-icons.vercel.app/api/icons?i=webstorm,nextjs,ts,react,tailwind,git,github,vercel&theme=dark)
