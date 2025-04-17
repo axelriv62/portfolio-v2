@@ -1,6 +1,7 @@
 import "./globals.css";
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
 export default function RootLayout({
     children,
@@ -13,7 +14,7 @@ export default function RootLayout({
             <header>
                 <menu className="flex justify-between font-semibold">
                     <Link href="/">Axel Rivière</Link>
-                    <link rel="icon" href="https://avatars.githubusercontent.com/u/130988871?v=4" />
+                    <link rel="icon" href="/icons/logo.png" type="image/png" />
                     <div className="flex space-x-8">
                         <Link href="/about">Présentation</Link>
                         <Link href="/projects">Réalisations</Link>
