@@ -27,22 +27,30 @@ export default function About() {
                 </div>
                 <div className="mt-5">
                     <div className="flex flex-wrap xl:space-x-2">
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
-                            <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
-                            <Link href="/resume.pdf">CV</Link>
-                        </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
-                            <Image src="logos/github.svg" alt="GitHub" width={20} height={20} />
-                            <Link href="https://github.com/axelriv62">GitHub</Link>
-                        </button>
-                        <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
-                            <Image src="logos/linkedin.svg" alt="LinkedIn" width={20} height={20} />
-                            <Link href="https://linkedin.com/in/axel-riviere-dev">LinkedIn</Link>
-                        </button>
+                        <Link href="/resume.pdf">
+                            <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                                <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
+                                <p>CV</p>
+                            </button>
+                        </Link>
+                        <Link href="https://github.com/axelriv62">
+                            <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                                <Image src="logos/github.svg" alt="GitHub" width={20} height={20} />
+                                <p>GitHub</p>
+                            </button>
+                        </Link>
+                        <Link href="https://linkedin.com/in/axel-riviere-dev">
+                            <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
+                                <Image src="logos/linkedin.svg" alt="LinkedIn" width={20} height={20} />
+                                <p>LinkedIn</p>
+                            </button>
+                        </Link>
+                        <Link href="mailto:axel.riviere.dev@gmail.com">
                         <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
                             <Image src="icons/mail.svg" alt="Mail" width={20} height={20} />
-                            <Link href="mailto:axel.riviere.dev@gmail.com">Mail</Link>
+                            <p>Mail</p>
                         </button>
+                        </Link>
                     </div>
                     <div>
                         <h1 className="xl:text-8xl md:text-5xl text-3xl font-semibold p-1 mt-3">Axel Rivière</h1>

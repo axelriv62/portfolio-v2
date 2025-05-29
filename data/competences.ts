@@ -35,6 +35,7 @@ export const competences: Competence[] = [
     { name: "GitHub", icon: "/logos/github.svg" },
     { name: "GitLab", icon: "/logos/gitlab.svg" },
     { name: "Docker", icon: "/logos/docker.svg" },
+    { name: "AWS", icon: "/logos/aws.svg" },
     { name: "Bruno", icon: "/logos/bruno.png" },
     { name: "Postman", icon: "/logos/postman.svg" },
     { name: "Scene Builder", icon: "/logos/scene-builder.png" },
@@ -43,5 +44,4 @@ export const competences: Competence[] = [
     { name: "JUnit", icon: "/logos/junit.svg" },
     { name: "Selenium", icon: "/logos/selenium.svg" },
     { name: "Figma", icon: "/logos/figma.svg" },
-    { name: "Trello", icon: "/logos/trello.svg" },
 ];

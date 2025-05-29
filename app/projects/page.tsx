@@ -1,6 +1,7 @@
 import { projects } from "@/data/projects";
 import Image from "next/image";
 import {Metadata} from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: 'Réalisations - Axel Rivière',
@@ -12,13 +13,15 @@ export default function Projects() {
                 {projects.map((project, index) => (
                     <div key={index} className={`fade-in-bottom flex flex-col xl:flex-row p-8 min-w-full ${index % 2 === 1 ? 'xl:flex-row-reverse' : ''} space-y-4 lg:space-y-0 lg:space-x-8`}>
                         <div className={`flex flex-col items-center w-full xl:w-1/2 ${index % 2 === 0 ? 'xl:mr-[64px] xl:ml-[128px]' : 'xl:ml-[64px] xl:mr-[128px]'} mx-0`}>
-                            <Image
-                                src={project.image}
-                                alt={project.title}
-                                width={800}
-                                height={500}
-                                className="rounded-lg shadow-lg duration-300 hover:scale-105"
-                            />
+                            <Link href={project.image}>
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    width={800}
+                                    height={500}
+                                    className="rounded-lg shadow-lg duration-300 hover:scale-105"
+                                />
+                            </Link>
                         </div>
                         <div className="flex flex-col justify-center max-w-lg lg:w-1/2">
                             <h4 className="xl:text-2xl font-bold">{project.title}</h4>

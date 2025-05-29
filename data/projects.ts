@@ -8,6 +8,20 @@ export type Projects = {
 
 export const projects: Projects[] = [
     {
+        image: "/projects/roulmapoul.png",
+        title: "Roulmapoul",
+        description: "Application de location de voitures.",
+        tags: ["Angular", "TypeScript"],
+        link: "https://github.com/axelriv62/roulmapoul",
+    },
+    {
+        image: "/projects/roulmapoul-api.png",
+        title: "Roumapoul API",
+        description: "API de gestion de location de voitures",
+        tags: ["Laravel", "SQLite", "Bruno"],
+        link: "https://github.com/axelriv62/roulmapoul-api",
+    },
+    {
         image: "/projects/gestion-depenses.png",
         title: "Gestion Dépenses",
         description: "Application de gestion de dépenses.",

@@ -27,13 +27,15 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold p-1 mb-8">Dernière réalisation</h3>
                 <div className="fade-in-bottom flex flex-col lg:flex-row p-8 min-w-full space-y-4 lg:space-y-0 lg:space-x-8">
                     <div className={`flex flex-col items-center w-full xl:w-1/2 xl:mr-[64px] xl:ml-[128px] mx-0`}>
-                        <Image
-                            src={firstProject.image}
-                            alt={firstProject.title}
-                            width={800}
-                            height={500}
-                            className="rounded-lg shadow-lg duration-300 hover:scale-105"
-                        />
+                        <Link href={firstProject.image}>
+                            <Image
+                                src={firstProject.image}
+                                alt={firstProject.title}
+                                width={800}
+                                height={500}
+                                className="rounded-lg shadow-lg duration-300 hover:scale-105"
+                            />
+                        </Link>
                     </div>
                     <div className="flex flex-col justify-center max-w-lg lg:w-1/2">
                         <h4 className="xl:text-2xl font-bold">{firstProject.title}</h4>

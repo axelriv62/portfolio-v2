@@ -26,7 +26,7 @@ export const formations: Experiences[] = [
 
 export const experiences: Experiences[] = [
     {
-        title: "Stagiaire développeur Next.js",
+        title: "Stagiaire développeur full-stack",
         date: "Mai-Juin 2025",
         place: "4spel, Violaines",
         details: ""
