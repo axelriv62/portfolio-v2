@@ -17,7 +17,7 @@ export const projects: Projects[] = [
     {
         image: "/projects/roulmapoul-api.png",
         title: "Roumapoul API",
-        description: "API de gestion de location de voitures",
+        description: "API de gestion de locations de voitures",
         tags: ["Laravel", "SQLite", "Bruno"],
         link: "https://github.com/axelriv62/roulmapoul-api",
     },

@@ -8,9 +8,9 @@ export type Experiences = {
 export const formations: Experiences[] = [
     {
         title: "BUT Informatique",
-        date: "2023-",
+        date: "2023-2026",
         place: "IUT de Lens",
-        details: ""
+        details: "Parcours « Réalisation d'applications : conception, développement, validation »"
     },
     {
         title: `Baccaulauréat Général`,
@@ -26,9 +26,15 @@ export const formations: Experiences[] = [
 
 export const experiences: Experiences[] = [
     {
+        title: "Alternant développeur full-stack",
+        date: "Septembre 2025 - Juillet 2026",
+        place: "Worldline, Noyelle-lès-Seclin",
+        details: ""
+    },
+    {
         title: "Stagiaire développeur full-stack",
         date: "Mai-Juin 2025",
-        place: "4spel, Violaines",
+        place: "4SPEL, Violaines",
         details: ""
     },
     {
@@ -64,6 +70,12 @@ export const experiences: Experiences[] = [
 ];
 
 export const certifications: Experiences[] = [
+    {
+        title: "Test of English for International Communication (TOEIC)",
+        date: "Janvier 2026",
+        place: "",
+        details: "En attente des résultats"
+    },
     {
         title: "Cambridge English Certificate (CEC)",
         date: "Septembre 2023",
