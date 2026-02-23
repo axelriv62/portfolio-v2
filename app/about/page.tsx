@@ -19,11 +19,34 @@ export default function About() {
         setShowMoreContent(!showMoreContent);
     }
 
+    const CompetenceItem = ({ competence }: { competence: typeof competences[0] }) => (
+        <li className="p-2 flex items-center justify-center duration-100 hover:scale-110 group relative z-0 hover:z-50">
+            <Image
+                src={competence.icon}
+                alt={competence.name}
+                width={LOGO_SIZE}
+                height={LOGO_SIZE}
+                loading="lazy"
+            />
+            <div className="absolute bottom-full mb-2 hidden group-hover:block px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm whitespace-nowrap">
+                {competence.name}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-800 rotate-45 -bottom-1"></div>
+            </div>
+        </li>
+    );
+
     return (
         <main className="fade-in-bottom w-3/4 mx-auto mt-28 mb-28">
             <div className="md:flex md:space-x-12 md:items-center">
                 <div className="flex flex-col items-center lg:flex-shrink-0">
-                    <Image src="/profile-picture.png" alt="Profile picture" width={320} height={320} className="border rounded-full border-stone-500 object-cover w-64 h-64 md:w-80 md:h-80" />
+                    <Image
+                        src="/profile-picture.png"
+                        alt="Profile picture"
+                        width={320}
+                        height={320}
+                        className="border rounded-full border-stone-500 object-cover w-64 h-64 md:w-80 md:h-80"
+                        priority
+                    />
                     <div className="flex space-x-5 mt-5 items-center">
                         <h3 className="text-2xl font-semibold p-1">Langues</h3>
                         <div className="flex space-x-5">
@@ -46,7 +69,7 @@ export default function About() {
                 </div>
                 <div className="mt-5">
                     <div className="flex flex-wrap xl:space-x-2">
-                        <Link href="/resume.pdf">
+                        <Link href="/cv-axel-riviere.pdf">
                             <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
                                 <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
                                 <p>CV</p>
@@ -86,43 +109,24 @@ export default function About() {
                 <h3 className="text-2xl font-semibold p-1 mt-20">Compétences</h3>
                 <ul className="flex justify-between flex-wrap mt-4 overflow-visible">
                     {firstHalf.map((competence) => (
-                        <li key={competence.name}
-                            className="p-2 flex items-center justify-center duration-100 hover:scale-110 group relative z-0 hover:z-50">
-                            <Image src={competence.icon} alt={competence.name} width={LOGO_SIZE} height={LOGO_SIZE}/>
-                            <div className="absolute bottom-full mb-2 hidden group-hover:block px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm whitespace-nowrap">
-                                {competence.name}
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-800 rotate-45 -bottom-1"></div>
-                            </div>
-                        </li>
+                        <CompetenceItem key={competence.name} competence={competence} />
                     ))}
                 </ul>
 
-                <div className={`transition-all duration-300 ease-in-out overflow-visible ${showMoreContent ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0 invisible'}`}>
-                    <ul className="flex justify-between flex-wrap mt-4 overflow-visible">
-                        {secondHalf.map((competence) => (
-                            <li key={competence.name}
-                                className="p-2 flex items-center justify-center duration-100 hover:scale-110 group relative z-0 hover:z-50">
-                                <Image src={competence.icon} alt={competence.name} width={LOGO_SIZE} height={LOGO_SIZE}/>
-                                <div className="absolute bottom-full mb-2 hidden group-hover:block px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm whitespace-nowrap ">
-                                    {competence.name}
-                                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-800 rotate-45 -bottom-1"></div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                    <ul className="flex justify-between flex-wrap mt-4 overflow-visible">
-                        {thirdHalf.map((competence) => (
-                            <li key={competence.name}
-                                className="p-2 flex items-center justify-center duration-100 hover:scale-110 group relative z-0 hover:z-50">
-                                <Image src={competence.icon} alt={competence.name} width={LOGO_SIZE} height={LOGO_SIZE}/>
-                                <div className="absolute bottom-full mb-2 hidden group-hover:block px-3 py-2 text-sm font-medium text-white bg-gray-800 rounded-lg shadow-sm whitespace-nowrap">
-                                    {competence.name}
-                                    <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-gray-800 rotate-45 -bottom-1"></div>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                {showMoreContent && (
+                    <>
+                        <ul className="flex justify-between flex-wrap mt-4 overflow-visible">
+                            {secondHalf.map((competence) => (
+                                <CompetenceItem key={competence.name} competence={competence} />
+                            ))}
+                        </ul>
+                        <ul className="flex justify-between flex-wrap mt-4 overflow-visible">
+                            {thirdHalf.map((competence) => (
+                                <CompetenceItem key={competence.name} competence={competence} />
+                            ))}
+                        </ul>
+                    </>
+                )}
             </div>
 
             <button onClick={switchMoreContent} className={`flex items-center justify-center mx-auto duration-300 hover:scale-110 transition-transform mt-3 ${showMoreContent ? 'rotate-180' : ''}`}>
