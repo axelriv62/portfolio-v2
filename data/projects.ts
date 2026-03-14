@@ -8,6 +8,13 @@ export type Projects = {
 
 export const projects: Projects[] = [
     {
+        image: "/projects/abyss-social-sd.png",
+        title: "Abyss Social SD",
+        description: "Service de génération d'images de posts de d'avatars.",
+        tags: ["Python", "Flask", "Stable Diffusion", "MongoDB"],
+        link: "https://github.com/axelriv62/abyss-social-sd",
+    },
+    {
         image: "/projects/roulmapoul.png",
         title: "Roulmapoul",
         description: "Application de location de voitures.",

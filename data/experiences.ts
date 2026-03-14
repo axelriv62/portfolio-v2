@@ -72,9 +72,9 @@ export const experiences: Experiences[] = [
 export const certifications: Experiences[] = [
     {
         title: "Test of English for International Communication (TOEIC)",
-        date: "Janvier 2026",
+        date: "Février 2026",
         place: "",
-        details: "En attente des résultats"
+        details: "955/990, Niveau C1"
     },
     {
         title: "Cambridge English Certificate (CEC)",

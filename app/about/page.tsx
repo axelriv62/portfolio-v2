@@ -69,7 +69,7 @@ export default function About() {
                 </div>
                 <div className="mt-5">
                     <div className="flex flex-wrap xl:space-x-2">
-                        <Link href="/cv-axel-riviere.pdf">
+                        <Link href="/resume-axel-riviere.pdf">
                             <button className="border font-bold text-xs py-2 px-4 rounded-xl border-stone-500 flex items-center space-x-2 duration-100 hover:scale-105">
                                 <Image src="icons/resume.svg" alt="CV" width={20} height={20} />
                                 <p>CV</p>
